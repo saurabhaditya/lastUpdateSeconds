@@ -4,21 +4,16 @@ export async function updateSeconds(event: WebhookEvent) {
 
   const today = new Date();
   const timestamp = {
-    year: today.getFullYear(),
-    month: today.getMonth()+1,
-    day: today.getDate(),
-    hours: today.getHours(),
-    minutes: today.getMinutes(),
-    seconds: today.getSeconds()
+    year: `${today.getFullYear()}`,
+    month: `${today.getMonth()+1}`,
+    day: `${today.getDate()}`,
+    hours: `${today.getHours()}`,
+    minutes: `${today.getMinutes()}`,
+    seconds: `${today.getSeconds()}`
   };
 
   const updateReqBody = {
-    'c_lastUpdateSeconds.year': `${timestamp.year}`,
-    'c_lastUpdateSeconds.month': `${timestamp.month}`,
-    'c_lastUpdateSeconds.day': `${timestamp.day}`,
-    'c_lastUpdateSeconds.hours': `${timestamp.hours}`,
-    'c_lastUpdateSeconds.minutes': `${timestamp.minutes}`,
-    'c_lastUpdateSeconds.seconds': `${timestamp.seconds}`
+    'c_lastUpdateSeconds': timestamp
   };
 
   const headers = new Headers();
