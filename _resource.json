@@ -1,0 +1,7 @@
+{
+    "$id": "LastUpdateSecondsPlugin",
+  "$schema": "https://schema.yext.com/config/platform/plugin/v1",
+  "globals": {
+    "API_KEY": "023cbf5b63b54b323dba34a7d2004ca8"
+  }
+}
